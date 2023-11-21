@@ -10,3 +10,16 @@ jobs:
      steps:
      - name: say hello
        run: echo "Hello bfs"
+     - uses: actions/checkout@v3
+     - name: echo file
+       run: cat Makefile
+
+   build-code:
+     runs-on: ubuntu-latest
+     needs:
+       - hello-devsecops
+
+     steps:
+       - name: build code
+         run: go build
+
