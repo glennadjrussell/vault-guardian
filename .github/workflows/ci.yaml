@@ -1,0 +1,11 @@
+name: ci-demo
+
+on:
+
+jobs:
+   hello-devsecops:
+     runs-on: ubuntu-latest
+
+     steps:
+     - name: say hello
+       run: echo "Hello bfs"
